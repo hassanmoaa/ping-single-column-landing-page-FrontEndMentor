@@ -1,0 +1,212 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+/* Prevent font size inflation */
+html {
+	-moz-text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+	text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+	margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'],
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* Set core body defaults */
+body {
+	min-height: 100vh;
+	line-height: 1.5;
+}
+
+/* ABBR DECORATION */
+abbr {
+	text-decoration: none;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+	line-height: 1.1;
+}
+
+/* Make images easier to work with */
+svg,
+img,
+picture {
+	max-width: 100%;
+	display: block;
+}
+
+:root {
+	/*--PRIMARY--*/
+	--White: hsl(0, 0%, 100%);
+	--Blue: hsl(223, 87%, 63%);
+
+	/*--SECONDARY--*/
+	--Pale-Blue: hsl(223, 100%, 88%);
+	--Light-Red: hsl(354, 100%, 66%);
+
+	/*--NEUTRAL--*/
+	--Gray: hsl(0, 0%, 59%);
+	--Very-Dark-Blue: hsl(209, 33%, 12%);
+
+	/*--Font-Weight--*/
+	--regular-fw: 300;
+	--medium-fw: 600;
+	--bold-fw: 700;
+
+	/*--Font-Size--*/
+	--fs-08: 0.8rem;
+	--fs-1: 1rem;
+	--fs-125: 1.25rem;
+	--fs-15: 1.5rem;
+	--fs-175: 1.75rem;
+	--fs-2: 2rem;
+	--fs-225: 2.25rem;
+	--fs-25: 2.5rem;
+	--fs-275: 2.75rem;
+	--fs-300: 3rem;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Libre Franklin', sans-serif;
+	font-weight: 300;
+	font-size: 1.25rem;
+	text-align: center;
+}
+
+.container {
+	padding: 2rem;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.wrapper > * {
+	padding: 0.5rem 0;
+}
+
+form {
+	width: 85%;
+	margin-block: 1.5rem;
+}
+
+input {
+	width: 100%;
+	border: 1px solid var(--Pale-Blue);
+	border-radius: 20px;
+	padding: 0.8rem;
+	margin-bottom: 0.5rem;
+}
+
+#error {
+	font-style: italic;
+	font-size: var(--fs-1);
+	padding-bottom: 1rem;
+}
+
+button {
+	display: block;
+	width: 100%;
+	border: none;
+	border-radius: 20px;
+	background-color: var(--Blue);
+	color: white;
+	padding-block: 0.8rem;
+	cursor: pointer;
+}
+button:hover,
+button:focus {
+	background-color: var(--Pale-Blue);
+}
+
+h1 {
+	color: var(--Gray);
+	font-weight: var(--regular-fw);
+	font-size: 1.75em;
+	margin-top: 1rem;
+}
+span {
+	color: var(--Very-Dark-Blue);
+	font-weight: var(--bold-fw);
+}
+
+p {
+	font-size: var(--fs-1);
+}
+
+footer {
+	color: var(--Gray);
+	font-size: var(--fs-08);
+	margin-bottom: 1rem;
+}
+.icons {
+	margin-bottom: 1rem;
+}
+.icons > * {
+	color: var(--Blue);
+	padding-inline: 1.5rem;
+}
+
+@media (min-width: 650px) {
+	.container {
+		max-width: 700px;
+	}
+	form {
+		width: 70%;
+	}
+	input {
+		margin-right: 0.5rem;
+		width: 65%;
+	}
+	button {
+		display: inline-block;
+		width: 25%;
+	}
+	#error {
+		display: none;
+	}
+}
