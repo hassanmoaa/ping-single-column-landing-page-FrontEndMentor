@@ -35,8 +35,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: ()
-- Live Site URL: ()
+- Solution URL: (https://github.com/hassanmoaa/ping-single-column-landing-page-FrontEndMentor.git)
+- Live Site URL: (https://jade-begonia-bb7ead.netlify.app/)
 
 ### Built with
 
